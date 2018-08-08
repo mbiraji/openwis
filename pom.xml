@@ -3,7 +3,7 @@
 
 	<groupId>io.openwis</groupId>
 	<artifactId>openwis</artifactId>
-	<version>3.14.8</version>
+	<version>0.0.1</version>
 	<packaging>pom</packaging>
 	<name>OpenWIS</name>
 
@@ -12,10 +12,10 @@
 	behalf of OpenWIS Association (with UKMO, MF, BoM, KMA, and MFI as the founding members)</description>
 
 	<scm>
-		<connection>scm:git:git@github.com:OpenWIS/openwis.git</connection>
-		<developerConnection>scm:git:git@github.com:OpenWIS/openwis.git</developerConnection>
-		<tag>openwis-3.14.8-release</tag>
-		<url>https://github.com/OpenWIS/openwis</url>
+		<connection>scm:git:git@github.com:mbiraji/openwis.git</connection>
+		<developerConnection>scm:git:git@github.com:mbiraji/openwis.git</developerConnection>
+		<tag>openwis-0.0.1</tag>
+		<url>https://github.com/mbiraji/openwis</url>
 	</scm>
 
 	<organization>
@@ -27,7 +27,7 @@
 
 	<issueManagement>
 		<system>GitHub</system>
-		<url>https://github.com/OpenWIS/openwis/issues</url>
+		<url>https://github.com/mbiraji/openwis/issues</url>
 	</issueManagement>
 
 	<ciManagement>
@@ -149,6 +149,17 @@
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
+
+			<plugin>
+	               	<groupId>org.apache.maven.plugins</groupId>
+	               	<artifactId>maven-release-plugin</artifactId>
+	               	<version>2.5.3</version>
+	               	<configuration>
+	                	<tagBase>
+	                             /etc/openwis/tags
+	                	</tagBase>
+                	</configuration>
+	            	</plugin>
 		</plugins>
 
 		<pluginManagement>
@@ -220,6 +231,48 @@
 						<autoVersionSubmodules>true</autoVersionSubmodules>
 						<!--This is set so not to break Maven releasings in Jenkins-->
 						<updateWorkingCopyVersions>false</updateWorkingCopyVersions>
+<checkModificationExcludes>
+<checkModificationExclude>pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-dataservice/openwis-dataservice-cache/openwis-dataservice-cache-core/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-dataservice/openwis-dataservice-cache/openwis-dataservice-cache-ejb/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-dataservice/openwis-dataservice-cache/openwis-dataservice-cache-webapp/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-dataservice/openwis-dataservice-cache/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-dataservice/openwis-dataservice-common/openwis-dataservice-common-domain/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-dataservice/openwis-dataservice-common/openwis-dataservice-common-timer/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-dataservice/openwis-dataservice-common/openwis-dataservice-common-utils/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-dataservice/openwis-dataservice-config/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-dataservice/openwis-dataservice-server/openwis-dataservice-server-ear/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-dataservice/openwis-dataservice-server/openwis-dataservice-server-ejb/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-dataservice/openwis-dataservice-server/openwis-dataservice-server-webapp/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-dataservice/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-dependencies/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-harness/openwis-harness-client/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-harness/openwis-harness-dissemination/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-harness/openwis-harness-localdatasource/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-harness/openwis-harness-mssfss/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-harness/openwis-harness-subselectionparameters/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-harness/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-management/openwis-management-client/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-management/openwis-management-service/openwis-management-service-common/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-management/openwis-management-service/openwis-management-service-ear/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-management/openwis-management-service/openwis-management-service-ejb/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-management/openwis-management-service/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-management/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-metadataportal/cachingxslt/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-metadataportal/jeeves/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-metadataportal/oaipmh/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-metadataportal/openwis-portal-solr/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-metadataportal/openwis-portal/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-metadataportal/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-metadataportal/sde/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-portal-client/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-securityservice/openwis-securityservice-utils/PopulateLDAP/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-securityservice/openwis-securityservice-war/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-securityservice/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-stagingpost/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-tools/load-test-data/pom.xml</checkModificationExclude>
+<checkModificationExclude>openwis-tools/pom.xml</checkModificationExclude>
+</checkModificationExcludes>
 					</configuration>
 					<executions>
 						<execution>
