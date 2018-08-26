@@ -4,13 +4,13 @@
 	<parent>
 		<artifactId>openwis-dataservice</artifactId>
 		<groupId>io.openwis.dataservice</groupId>
-		<version>0.0.10-SNAPSHOT</version>
+		<version>0.0.10</version>
 		<relativePath>../../pom.xml</relativePath>
 	</parent>
 	
 	<groupId>io.openwis.dataservice.server</groupId>
 	<artifactId>openwis-dataservice-server-ejb</artifactId>
-  <version>0.0.10-SNAPSHOT</version>
+  <version>0.0.10</version>
 	<name>openwis-dataservice-server-ejb</name>
 	<packaging>jar</packaging>
 
