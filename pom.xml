@@ -3,7 +3,7 @@
 
 	<groupId>io.openwis</groupId>
 	<artifactId>openwis</artifactId>
-	<version>0.0.10</version>
+	<version>0.0.11</version>
 	<packaging>pom</packaging>
 	<name>OpenWIS</name>
 
@@ -14,7 +14,7 @@
 	<scm>
 		<connection>scm:git:git@github.com:mbiraji/openwis.git</connection>
 		<developerConnection>scm:git:git@github.com:mbiraji/openwis.git</developerConnection>
-		<tag>openwis-0.0.10</tag>
+		<tag>openwis-0.0.11</tag>
 		<url>https://github.com/mbiraji/openwis</url>
 	</scm>
 
